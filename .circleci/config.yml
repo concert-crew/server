@@ -1,4 +1,4 @@
-# Use the latest 2.1 versversion: 2.1 # use CircleCI 2.1
+version: 2.1 # use CircleCI 2.1
 orbs:
    node: circleci/node@5.0.0 # Needed for javascript runtime
    heroku: circleci/heroku@1.0.1 # Use the Heroku orb in your config
