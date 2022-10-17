@@ -33,10 +33,12 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'factory_bot_rails' 
   gem 'pry' 
+  gem 'faker'
 end
 
 group :development do
   gem 'listen', '>= 3.0.5', '< 3.2'
+  gem 'graphiql-rails'
 end
 
 group :test do 
