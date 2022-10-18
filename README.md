@@ -1,24 +1,8 @@
-# README
+# Server-Concert Crew
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+<ul>
+<li><b>Server</b> is a backend <b>Rails</b> API and database deployed via Heroku and consumed by our Concert Crew frontend application.</li>
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+<li>Server exposes API endpoints that hold a user's information, events, and friends.</li>
+ 
+<li>This application utilizes a <b>relational database</b> to store user, event, and friends data.</li>
