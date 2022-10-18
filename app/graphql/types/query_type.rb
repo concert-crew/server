@@ -13,11 +13,11 @@ module Types
 
     # single User
     field :user, Types::UserType, null: false do 
-      argument :id, ID, required: true 
+      argument :name, String, required: true 
     end
 
-    def user(id:)
-      User.find(id)
+    def user(name:)
+      User.find_by(name: name)  
     end
   end 
 end
