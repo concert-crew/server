@@ -4,12 +4,12 @@ module Types
   class EventType < Types::BaseObject
     field :id, ID, null: false
     field :name, String, null: false 
-    field :ticketmasterID, String
-    field :buyTicketsUrl, String 
+    field :ticketmaster_id, String
+    field :buy_tickets_url, String 
     field :image, String 
     field :date, String
     field :time, String 
-    field :venueName, String 
+    field :venue_name, String 
     field :city, String 
     field :state, String 
     field :address, String 
