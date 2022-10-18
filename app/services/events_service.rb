@@ -1,19 +1,19 @@
 # frozen_string_literal: true
 
-class ParksService
+class EventsService
   class << self
-    def self.parks_near(keyword)
-      response = conn.get('/')
+    def call_for_events(keyword)
+      response = conn.get("/discovery/v2/events.json?&keyword=#{keyword}")
       parse_json(response)
     end
 
-    def self.conn
+    def conn
       Faraday.new(url: "https://app.ticketmaster.com") do |faraday|
-        faraday.headers['apikey'] = ENV.fetch('trail_api_key', nil)
+        faraday.params['apikey'] = ENV.fetch('ticketmaster_api_key')
       end
     end
 
-    def self.parse_json(response)
+    def parse_json(response)
       JSON.parse(response.body, symbolize_names: true)
     end
   end
