@@ -3,14 +3,12 @@ require 'rails_helper'
 RSpec.describe EventsService do
   it 'gets events' do
     response = EventsService.call_for_events('Seattle')
-    require 'pry'; binding.pry 
     expect(response).to be_a(Hash)
     expect(response[:_embedded][:events].first).to have_key(:name)#event name
     expect(response[:_embedded][:events].first).to have_key(:id)#ticketmaster event ID
     expect(response[:_embedded][:events].first).to have_key(:url)#buy ticketsURL
     expect(response[:_embedded][:events].first).to have_key(:images)#images
     expect(response[:_embedded][:events].first[:dates][:start]).to have_key(:localDate)#event date
-    expect(response[:_embedded][:events].first[:dates][:start]).to have_key(:localTime)#event time
     expect(response[:_embedded][:events].first).to have_key(:_embedded)
     expect(response[:_embedded][:events].first[:_embedded]).to have_key(:venues)
     expect(response[:_embedded][:events].first[:_embedded][:venues].first).to have_key(:name)#Venue name

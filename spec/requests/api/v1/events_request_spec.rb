@@ -20,18 +20,14 @@ RSpec.describe "Events", type: :request do
       expect(response).to have_http_status(200)
 
       events = JSON.parse(response.body, symbolize_names: true)
-      require 'pry'; binding.pry 
     end
 
-    it 'returns a 200 status code' do
+    it 'returns a 404 status code when event not found' do
       keyword = 'Ranchero'
       get "/api/v1/events?keyword=#{keyword}"
 
-      expect(response).to be_successful
-      expect(response).to have_http_status(200)
-
-      events = JSON.parse(response.body, symbolize_names: true)
-      require 'pry'; binding.pry 
+      expect(response).to have_http_status(404)
+      expect(response.body).to eq("{\"errors\":\"No events found\"}")
     end
   end
 end

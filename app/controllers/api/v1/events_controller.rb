@@ -5,7 +5,11 @@ module Api
     class EventsController < ApplicationController
       def show
         events = EventsFacade.get_events(search_params[:keyword])
-        render json: EventSerializer.new(events)
+        if !events.nil?
+          render json: EventSerializer.new(events)
+        else
+          render json: { errors: "No events found" }, status: 404
+        end
       end
 
       private
