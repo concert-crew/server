@@ -4,7 +4,7 @@ module Types
   class EventType < Types::BaseObject
     field :id, ID, null: false
     field :name, String
-    field :date, GraphQL::Types::ISO8601DateTime
+    field :date, String
     field :image, String 
     field :_embedded, String 
     field :url, String 
