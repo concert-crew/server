@@ -9,5 +9,6 @@ RSpec.describe User do
   describe 'relationships' do 
     it { should have_many :user_events }
     it { should have_many(:events).through(:user_events) }
+    it { should have_many(:friends) }
   end 
 end
