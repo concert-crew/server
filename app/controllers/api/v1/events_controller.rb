@@ -5,7 +5,6 @@ module Api
     class EventsController < ApplicationController
       def show
         events = EventsFacade.get_events(search_params[:keyword])
-        require 'pry'; binding.pry 
         render json: EventSerializer.new(events)
       end
 

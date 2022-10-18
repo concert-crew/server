@@ -9,7 +9,8 @@ RSpec.describe "Events", type: :request do
       expect(response).to be_successful
       expect(response).to have_http_status(200)
 
-      forecast = JSON.parse(response.body, symbolize_names: true)
+      events = JSON.parse(response.body, symbolize_names: true)
+      require 'pry'; binding.pry 
     end
   end
 end
