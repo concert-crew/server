@@ -3,10 +3,11 @@
 module Types
   class EventType < Types::BaseObject
     field :id, ID, null: false
-    field :artist_name, String
-    field :venue_name, String
-    field :venue_location, String
+    field :name, String
     field :date, GraphQL::Types::ISO8601DateTime
+    field :image, String 
+    field :_embedded, String 
+    field :url, String 
     field :created_at, GraphQL::Types::ISO8601DateTime
     field :updated_at, GraphQL::Types::ISO8601DateTime
     field :users, [Types::UserType]
