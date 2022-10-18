@@ -1,15 +1,15 @@
 class PoroEvent
   attr_reader :name, :id, :buyTicketsUrl, :image, :date, :time, :venueName, :city, :state, :address, :longitude, :latitude
   def initialize(event_data)
-    @name = event_data[:name]
-    @id = event_data[:id]
-    @buyTicketsUrl = event_data[:url]
+    @name = name_check(event_data)
+    @id = id_check(event_data)
+    @buyTicketsUrl = ticket_check(event_data)
     @image = find_largest_image(event_data[:images])[:url]
-    @date = event_data[:dates][:start][:localDate]
-    @time = event_data[:dates][:start][:localTime]
-    @venueName = event_data[:_embedded][:venues].first[:name]
-    @city = event_data[:_embedded][:venues].first[:city][:name]
-    @state = event_data[:_embedded][:venues].first[:state][:name]
+    @date = date_check(event_data)
+    @time = time_check(event_data)
+    @venueName = venue_check(event_data)
+    @city = city_check(event_data)
+    @state = state_check(event_data)
     @address = event_data[:_embedded][:venues].first[:address][:line1]
     @longitude = event_data[:_embedded][:venues].first[:location][:longitude]
     @latitude = event_data[:_embedded][:venues].first[:location][:latitude]
@@ -20,4 +20,69 @@ class PoroEvent
       image[:width]
     end
   end
+
+  def name_check(event_data)
+    if event_data.has_key?(:name)
+      event_data[:name]
+    else
+      "nil"
+    end
+  end
+
+  def id_check(event_data)
+    if event_data.has_key?(:url)
+      event_data[:url]
+    else
+      "nil"
+    end
+  end
+
+  def ticket_check(event_data)
+    if event_data.has_key?(:id)
+      event_data[:id]
+    else
+      "nil"
+    end
+  end
+
+  def date_check(event_data)
+    if event_data[:dates][:start].has_key?(:localTime)
+      event_data[:dates][:start][:localDate]
+    else
+      "nil"
+    end
+  end
+
+  def time_check(event_data)
+    if event_data[:dates][:start].has_key?(:localTime)
+      event_data[:dates][:start][:localTime]
+    else
+      "nil"
+    end
+  end
+
+  def city_check(event_data)
+    if event_data[:_embedded][:venues].first.has_key?(:city)
+      event_data[:_embedded][:venues].first[:city][:name]
+    else
+      "nil"
+    end
+  end
+
+  def venue_check(event_data)
+    if event_data[:_embedded][:venues].first.has_key?(:name)
+      event_data[:_embedded][:venues].first[:name]
+    else
+      "nil"
+    end
+  end
+  
+  def state_check(event_data)
+    if event_data[:_embedded][:venues].first.has_key?(:state)
+      event_data[:_embedded][:venues].first[:state][:name]
+    else
+      "nil"
+    end
+  end
+  
 end
