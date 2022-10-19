@@ -29,7 +29,7 @@ class PoroEvent
     end
   end
 
-  def id_check(event_data)
+  def ticket_check(event_data)
     if event_data.has_key?(:url)
       event_data[:url]
     else
@@ -37,7 +37,7 @@ class PoroEvent
     end
   end
 
-  def ticket_check(event_data)
+  def id_check(event_data)
     if event_data.has_key?(:id)
       event_data[:id]
     else
