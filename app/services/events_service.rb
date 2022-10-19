@@ -17,5 +17,4 @@ class EventsService
       JSON.parse(response.body, symbolize_names: true)
     end
   end
-
 end
