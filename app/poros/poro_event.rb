@@ -10,9 +10,10 @@ class PoroEvent
     @venueName = venue_check(event_data)
     @city = city_check(event_data)
     @state = state_check(event_data)
-    @address = event_data[:_embedded][:venues].first[:address][:line1]
-    @longitude = event_data[:_embedded][:venues].first[:location][:longitude]
-    @latitude = event_data[:_embedded][:venues].first[:location][:latitude]
+    @address = address_check(event_data)
+    # require 'pry'; binding.pry 
+    @longitude = longitude_check(event_data)
+    @latitude = latitude_check(event_data)
   end
 
   def find_largest_image(images)
@@ -80,6 +81,31 @@ class PoroEvent
   def state_check(event_data)
     if event_data[:_embedded][:venues].first.has_key?(:state)
       event_data[:_embedded][:venues].first[:state][:name]
+    else
+      "nil"
+    end
+  end
+
+  def address_check(event_data)
+    if event_data[:_embedded][:venues].first.has_key?(:address)
+      event_data[:_embedded][:venues].first[:address][:line1]
+    else
+      "nil"
+    end
+  end
+
+  def longitude_check(event_data)
+    if event_data[:_embedded][:venues].first.has_key?(:location)
+      event_data[:_embedded][:venues].first[:location][:longitude]
+    else
+      "nil"
+    end
+  end
+
+
+  def latitude_check(event_data)
+    if event_data[:_embedded][:venues].first.has_key?(:location)
+      event_data[:_embedded][:venues].first[:location][:latitude]
     else
       "nil"
     end
