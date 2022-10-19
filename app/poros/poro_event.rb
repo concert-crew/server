@@ -11,7 +11,6 @@ class PoroEvent
     @city = city_check(event_data)
     @state = state_check(event_data)
     @address = address_check(event_data)
-    # require 'pry'; binding.pry 
     @longitude = longitude_check(event_data)
     @latitude = latitude_check(event_data)
   end
