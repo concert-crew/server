@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe EventsService do
-  it 'gets events' do
+  it 'gets events', :vcr do
     response = EventsService.call_for_events('Seattle')
     expect(response).to be_a(Hash)
     expect(response[:_embedded][:events].first).to have_key(:name)#event name
