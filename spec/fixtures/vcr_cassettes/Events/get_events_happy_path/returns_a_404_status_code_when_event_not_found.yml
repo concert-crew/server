@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://app.ticketmaster.com/discovery/v2/events.json?apikey=<apikey>&classificationName=music&keyword=Ranchero&size=10
+    uri: https://app.ticketmaster.com/discovery/v2/events.json?apikey=<apikey>&classificationName=music&countryCode=US&keyword=Ranchero&size=10
     body:
       encoding: US-ASCII
       string: ''
@@ -19,11 +19,11 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 19 Oct 2022 00:22:56 GMT
+      - Wed, 19 Oct 2022 17:30:31 GMT
       Content-Type:
       - application/json;charset=utf-8
       Content-Length:
-      - '169'
+      - '184'
       Connection:
       - keep-alive
       Server:
@@ -41,13 +41,13 @@ http_interactions:
       Rate-Limit:
       - '5000'
       Rate-Limit-Available:
-      - '4849'
+      - '4832'
       Rate-Limit-Over:
       - '0'
       Rate-Limit-Reset:
       - '1666208393376'
     body:
       encoding: UTF-8
-      string: '{"_links":{"self":{"href":"/discovery/v2/events.json?size=10&classificationName=music&keyword=Ranchero"}},"page":{"size":10,"totalElements":0,"totalPages":0,"number":0}}'
-  recorded_at: Wed, 19 Oct 2022 00:22:56 GMT
+      string: '{"_links":{"self":{"href":"/discovery/v2/events.json?size=10&countryCode=US&classificationName=music&keyword=Ranchero"}},"page":{"size":10,"totalElements":0,"totalPages":0,"number":0}}'
+  recorded_at: Wed, 19 Oct 2022 17:30:31 GMT
 recorded_with: VCR 6.1.0
