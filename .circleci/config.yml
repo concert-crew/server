@@ -52,8 +52,7 @@ workflows:
     jobs:
       - build-and-test
       - heroku/deploy-via-git: # Use the pre-configured job, deploy-via-git
-          parameters: 
-            - force: true
+          force: true
           requires:
             - build-and-test
           post-steps:
