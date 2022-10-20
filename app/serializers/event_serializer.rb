@@ -4,9 +4,9 @@ class EventSerializer
       {
         data: { 
           events: events.map do |event| {
-            id: event.id,
+            ticketmasterId: event.id,
             name: event.name,
-            buyTicketsURL: event.buyTicketsUrl,
+            buyTicketsUrl: event.buyTicketsUrl,
             image: event.image,
             date: event.date,
             time: event.time,
