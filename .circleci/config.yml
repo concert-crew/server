@@ -47,6 +47,18 @@ jobs: # a collection of steps
       - store_test_results: # Upload test results for display in Test Summary: https://circleci.com/docs/2.0/collect-test-data/
           path: test_results
       # See https://circleci.com/docs/2.0/deployment-integrations/ for example deploy configs
+
+jobs:
+  deploy:
+    executor: heroku/default
+    steps:
+      - checkout
+      - heroku/install
+      - run: heroku config:set BUILD_NUMBER=$CIRCLE_BUILD_NUM -a application-name
+      - heroku/deploy-via-git:
+          app-name: application-name
+          force: true
+
 workflows:
   build-test-deploy:
     jobs:
