@@ -50,14 +50,15 @@ jobs: # a collection of steps
 
 workflows:
   deploy:
-    executor: heroku/default
-    steps:
-      - checkout
-      - heroku/install
-      - run: heroku config:set BUILD_NUMBER=$CIRCLE_BUILD_NUM -a concert-crew-be
-      - heroku/deploy-via-git:
-          app-name: concert-crew-be
-          force: true
+    jobs: 
+      executor: heroku/default
+      steps:
+        - checkout
+        - heroku/install
+        - run: heroku config:set BUILD_NUMBER=$CIRCLE_BUILD_NUM -a concert-crew-be
+        - heroku/deploy-via-git:
+            app-name: concert-crew-be
+            force: true
   build-test-deploy:
     jobs:
       - build-and-test
