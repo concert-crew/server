@@ -16,7 +16,7 @@ class Mutations::CreateEvent < Mutations::BaseMutation
   field :event, Types::EventType, null: false 
   field :errors, [String], null: false 
 
-  def resolve(name:, date:, image:, buy_tickets_url:, time:, venue_name:, city:, state:, address:, longitude:, latitude:, ticketmaster_id:)
+  def resolve(name:, date:, image:, buy_tickets_url:, time:, venue_name:, city:, state:, address:, longitude:, latitude:, ticketmaster_id:, user_id:)
     event = Event.new(name: name, date: date, image: image, buy_tickets_url: buy_tickets_url, time: time, venue_name: venue_name, city: city, state: state, address: address, longitude: longitude, latitude: latitude, ticketmaster_id: ticketmaster_id)
 
     if event.save 
