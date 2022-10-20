@@ -54,9 +54,9 @@ jobs: # a collection of steps
     steps:
       - checkout
       - heroku/install
-      - run: heroku config:set BUILD_NUMBER=$CIRCLE_BUILD_NUM -a application-name
+      - run: heroku config:set BUILD_NUMBER=$CIRCLE_BUILD_NUM -a concert-crew-be
       - heroku/deploy-via-git:
-          app-name: application-name
+          app-name: concert-crew-be
           force: true
 
 workflows:
