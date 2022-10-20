@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_10_18_215232) do
+ActiveRecord::Schema.define(version: 2022_10_20_210806) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -30,6 +30,16 @@ ActiveRecord::Schema.define(version: 2022_10_18_215232) do
     t.string "longitude"
     t.string "latitude"
     t.string "ticketmaster_id"
+  end
+
+  create_table "friends", force: :cascade do |t|
+    t.bigint "follower_id"
+    t.bigint "followed_id"
+    t.integer "status", default: 0
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["followed_id"], name: "index_friends_on_followed_id"
+    t.index ["follower_id"], name: "index_friends_on_follower_id"
   end
 
   create_table "user_events", force: :cascade do |t|

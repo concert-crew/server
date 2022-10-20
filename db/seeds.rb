@@ -40,8 +40,8 @@
   )
 end
 
-Event.all.each do |event| 
-  User.all.each do |user| 
+Event.all.each do |event|
+  User.all.each do |user|
     event.user_events.create!(user_id: user.id, event_id: event.id)
   end
 end
