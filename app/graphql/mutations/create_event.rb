@@ -11,6 +11,7 @@ class Mutations::CreateEvent < Mutations::BaseMutation
   argument :longitude, String, required: true 
   argument :latitude, String, required: true 
   argument :ticketmaster_id, String, required: true 
+  argument :user_id, Integer, required: true
 
   field :event, Types::EventType, null: false 
   field :errors, [String], null: false 
