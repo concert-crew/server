@@ -4,3 +4,4 @@ class Friend < ApplicationRecord
 
   validates_presence_of :receiver_id, :requestor_id
 end
+
