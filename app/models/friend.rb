@@ -1,8 +1,6 @@
 class Friend < ApplicationRecord
-  belongs_to :User
-  belongs_to :follower, class_name: :User
-  belongs_to :followed, class_name: :User
+  belongs_to :receiver, class_name: :User
+  belongs_to :requestor, class_name: :User
 
-  validates_presence_of :followed_id, :follower_id, :status
-  enum status: [:pending, :approved]
+  validates_presence_of :receiver_id, :requestor_id
 end
