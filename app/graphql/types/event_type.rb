@@ -15,6 +15,7 @@ module Types
     field :address, String 
     field :longitude, String 
     field :latitude, String 
+    field :user_id, Integer, null: true
     field :attendees, [Types::UserType]
     field :created_at, GraphQL::Types::ISO8601DateTime
     field :updated_at, GraphQL::Types::ISO8601DateTime
