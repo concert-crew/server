@@ -23,6 +23,10 @@
     image: 'https://eitrawmaterials.eu/wp-content/uploads/2016/09/person-icon.png'
   )
 
+Friend.create!(receiver_id: chantal.id, requestor_id: abby.id)
+Friend.create!(receiver_id: mayu.id, requestor_id: abby.id)
+Friend.create!(receiver_id: shirley.id, requestor_id: mayu.id)
+
 5.times do 
   Event.create!(
     name: Faker::Artist.name, 
