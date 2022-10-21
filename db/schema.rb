@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_10_20_212818) do
+ActiveRecord::Schema.define(version: 2022_10_21_182159) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -33,13 +33,12 @@ ActiveRecord::Schema.define(version: 2022_10_20_212818) do
   end
 
   create_table "friends", force: :cascade do |t|
-    t.bigint "follower_id"
-    t.bigint "followed_id"
-    t.integer "status", default: 0
+    t.bigint "receiver_id"
+    t.bigint "requestor_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["followed_id"], name: "index_friends_on_followed_id"
-    t.index ["follower_id"], name: "index_friends_on_follower_id"
+    t.index ["receiver_id"], name: "index_friends_on_receiver_id"
+    t.index ["requestor_id"], name: "index_friends_on_requestor_id"
   end
 
   create_table "user_events", force: :cascade do |t|
@@ -54,10 +53,10 @@ ActiveRecord::Schema.define(version: 2022_10_20_212818) do
     t.string "image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "friend_id"
-    t.index ["friend_id"], name: "index_users_on_friend_id"
   end
 
+  add_foreign_key "friends", "users", column: "receiver_id"
+  add_foreign_key "friends", "users", column: "requestor_id"
   add_foreign_key "user_events", "events"
   add_foreign_key "user_events", "users"
 end
