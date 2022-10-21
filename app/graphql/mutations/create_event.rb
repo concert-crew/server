@@ -14,6 +14,7 @@ class Mutations::CreateEvent < Mutations::BaseMutation
   argument :user_id, Integer, required: true
 
   field :event, Types::EventType, null: false 
+  field :user_event, Types::UserEventType, null: false
   field :errors, [String], null: false 
 
   def resolve(name:, date:, image:, buy_tickets_url:, time:, venue_name:, city:, state:, address:, longitude:, latitude:, ticketmaster_id:, user_id:)
