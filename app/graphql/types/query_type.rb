@@ -1,5 +1,9 @@
 module Types
   class QueryType < Types::BaseObject
+    # Add `node(id: ID!) and `nodes(ids: [ID!]!)`
+    include GraphQL::Types::Relay::HasNodeField
+    include GraphQL::Types::Relay::HasNodesField
+
     # # Add `node(id: ID!) and `nodes(ids: [ID!]!)`
     # include GraphQL::Types::Relay::HasNodeField
     # include GraphQL::Types::Relay::HasNodesField
@@ -13,11 +17,11 @@ module Types
 
     # single User
     field :user, Types::UserType, null: false do 
-      argument :name, String, required: true 
+      argument :id, String, required: true 
     end
 
-    def user(name:)
-      User.find_by(name: name)  
+    def user(id:)
+      User.find_by(id: id)  
     end
 
     # all Events 
@@ -35,5 +39,13 @@ module Types
     def event(name:)
       Event.find_by(name: name)
     end
+
+    # all Users joined by a Friend association
+    # field :friends, [Types::UserType], null: true
+
+    # def friends(requestor_id:)
+    #   binding.pry
+    #   User.where(id: requestor_id)
+    # end
   end 
 end

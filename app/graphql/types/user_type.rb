@@ -9,9 +9,14 @@ module Types
     field :updated_at, GraphQL::Types::ISO8601DateTime
     field :events, [Types::EventType]
     field :event_count, Integer 
+    field :friends, [Types::UserType]
 
     def event_count
       object.events.count
+    end
+
+    def friends
+      object.friendships
     end
   end
 end
