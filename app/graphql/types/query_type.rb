@@ -35,5 +35,12 @@ module Types
     def event(name:)
       Event.find_by(name: name)
     end
+
+    # all UserEvents 
+    field :user_events, [Types::UserEventType], null: false 
+
+    def user_events
+      UserEvent.all 
+    end
   end 
 end
