@@ -28,7 +28,7 @@ Friend.create!(receiver_id: mayu.id, requestor_id: abby.id)
 Friend.create!(receiver_id: shirley.id, requestor_id: mayu.id)
 
 5.times do 
-  Event.create!(
+  event = Event.create!(
     name: Faker::Artist.name, 
     date: Faker::Date.between(from: '2023-01-01', to: '2023-06-25'),
     image: Faker::LoremFlickr.image, 
@@ -42,11 +42,8 @@ Friend.create!(receiver_id: shirley.id, requestor_id: mayu.id)
     latitude: Faker::Address.latitude,
     ticketmaster_id: Faker::Number.leading_zero_number(digits: 10)
   )
-end
 
-Event.all.each do |event|
   User.all.each do |user|
     event.user_events.create!(user_id: user.id, event_id: event.id)
   end
 end
-
