@@ -17,11 +17,11 @@ module Types
 
     # single User
     field :user, Types::UserType, null: false do 
-      argument :id, String, required: true 
+      argument :name, String, required: true 
     end
 
-    def user(id:)
-      User.find_by(id: id)  
+    def user(name:)
+      User.find_by(name: name)  
     end
 
     # all Events 
