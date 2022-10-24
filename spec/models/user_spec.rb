@@ -23,9 +23,15 @@ RSpec.describe User do
         image: 'https://avatars.githubusercontent.com/u/100726140?s=400&u=fefcffaec4d464cc411254317c47b087ab504c42&v=4'
       )
       
+      rue = User.create!(
+        name: 'Rue',
+        image: 'https://eitrawmaterials.eu/wp-content/uploads/2016/09/person-icon.png' 
+      )
+
       friendship1 = Friend.create!(receiver_id: chantal.id, requestor_id: abby.id)
       
-      expect(abby.friendships).to eq([friendship1])
+      expect(abby.friendships).to eq([chantal])
+      expect(abby.friendships).to_not eq([chantal, rue])
     end
   end
 end
