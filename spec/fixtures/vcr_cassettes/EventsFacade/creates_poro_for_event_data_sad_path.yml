@@ -1,0 +1,41 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://app.ticketmaster.com/discovery/v2/events.json?%2BTheatre%22%0A%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%7D,%0A%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%22genre%22:%2B%7B%0A%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%22id%22:%2B%22KnvZfZ7v7nJ%22,%0A%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%22name%22:%2B%22Classical%22%0A%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%7D,%0A%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%22subGenre%22:%2B%7B%0A%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%22id%22:%2B%22KZazBEonSMnZfZ7v7nI%22,%0A%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%22name%22:%2B%22Symphonic%22%0A%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%7D,%0A%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%22type%22:%2B%7B%0A%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%22id%22:%2B%22KZAyXgnZfZ7v7nI%22,%0A%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%22name%22:%2B%22Undefined%22%0A%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%7D,%0A%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%22subType%22:%2B%7B%0A%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%22id%22:%2B%22KZFzBErXgnZfZ7v7lJ%22,%0A%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%22name%22:%2B%22Undefined%22%0A%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%7D,%0A%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%22family%22:%2Bfalse%0A%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%7D%0A%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%5B,%0A%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%22upcomingEvents%22:%2B%7B%0A%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%22_total%22:%2B63,%0A%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%22tmr%22:%2B63,%0A%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%22_filtered%22:%2B0%0A%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%7D,%0A%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%22_links%22:%2B%7B%0A%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%22self%22:%2B%7B%0A%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%2B%22href%22:%2B%22/discovery/v2/attractions/K8vZ9171olV?locale%5D=en-us%22%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%5D%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%5D%0A%20%20%7D,%0A%20%20%22_links%22:%20%7B%0A%20%20%20%20%22first%22:%20%7B%0A%20%20%20%20%20%20%22href%22:%20%22/discovery/v2/events.json?countryCode=US&apikey=<apikey>&classificationName=music&countryCode=US&keyword=detroit&page=30&size=10%22%0A%20%20%20%20%7D%0A%20%20%7D,%0A%20%20%22page%22:%20%7B%0A%20%20%20%20%22size%22:%2010,%0A%20%20%20%20%22totalElements%22:%20307,%0A%20%20%20%20%22totalPages%22:%2031,%0A%20%20%20%20%22number%22:%200%0A%20%20%7D%0A%7D
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.6.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Date:
+      - Fri, 21 Oct 2022 17:36:32 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Server:
+      - nginx
+      X-Application-Context:
+      - application:default,prod1-us-east-1,docker:8080
+      Vary:
+      - Accept-Encoding
+    body:
+      encoding: ASCII-8BIT
+      string: '{"errors":[{"code":"DIS1006","detail":"Query param \"size\" must be
+        between 1 to 200","status":"400","_links":{"self":{"href":"/discovery/v2/errors.html#DIS1006"}}},{"code":"DIS1006","detail":"Query
+        param \"size\" must be between 1 to 200","status":"400","_links":{"self":{"href":"/discovery/v2/errors.html#DIS1006"}}}]}'
+  recorded_at: Fri, 21 Oct 2022 17:36:32 GMT
+recorded_with: VCR 6.1.0

@@ -40,12 +40,11 @@ module Types
       Event.find_by(name: name)
     end
 
-    # all Users joined by a Friend association
-    # field :friends, [Types::UserType], null: true
+    # all UserEvents 
+    field :user_events, [Types::UserEventType], null: false 
 
-    # def friends(requestor_id:)
-    #   binding.pry
-    #   User.where(id: requestor_id)
-    # end
+    def user_events
+      UserEvent.all 
+    end
   end 
 end
