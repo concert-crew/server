@@ -5,7 +5,9 @@
 
 <li>Server exposes API endpoints that hold a user's information, events, and friends.</li>
  
-<li>This application utilizes <b>GraphQL</b> to share and update user, event, and friends data which is stored in a normalized <b>PostgreSQL</b> database.</li></ul>
+<li>This application utilizes <b>GraphQL</b> to share and update user, event, and friends data which is stored in a normalized <b>PostgreSQL</b> database.</li>
+
+<li>The frontend application is deployed on <a href='https://concert-crew.herokuapp.com'> Heroku</a>  while the frontend repo can be found on <a href='https://github.com/concert-crew/client'> Github</a>.</li></ul>
 
 <!-- TABLE OF CONTENTS -->
 <h2 id="table-of-contents"> :book: Table of Contents</h2>
