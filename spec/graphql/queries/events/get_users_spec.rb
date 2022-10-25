@@ -16,7 +16,6 @@ module Queries
           expect(result['data']['users'][2]['name']).to eq('Mayu')
           expect(result['data']['users'][2]['name']).to_not eq('Abby')
 
-          users = User.all
           expect(result['data']['users'][0]).to have_key('name')
           expect(result['data']['users'][0]).to have_key('image')
         end 
