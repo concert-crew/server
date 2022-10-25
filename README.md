@@ -7,6 +7,8 @@
  
 <li>This application utilizes <b>GraphQL</b> to share and update user, event, and friends data which is stored in a normalized <b>PostgreSQL</b> database.</li>
 
+<li>The frontend application is deployed on <a href='https://concert-crew.herokuapp.com'> Heroku</a>  while the frontend repo can be found on <a href='https://github.com/concert-crew/client'> Github</a>.</li></ul>
+
 <!-- TABLE OF CONTENTS -->
 <h2 id="table-of-contents"> :book: Table of Contents</h2>
 
@@ -17,7 +19,7 @@
     <li><a href="#project-files-description"> ➤ Project Files Description</a></li>
     <li><a href="#tm-api"> ➤ Ticketmaster API</a></li>
     <li><a href="#db-schema"> ➤ Database Schema</a></li>
-    <li><a href="#getting-started"> ➤ Getting Started</a></li>
+    <li><a href="#endpoint"> ➤ Server API Endpoint</a></li>
     <li><a href="#credits"> ➤ Credits</a></li>
   </ol>
 </details>
@@ -39,6 +41,7 @@
   <li>Launchy</li>
   <li>Orderly</li>
   <li>Shoulda-Matchers</li>
+  <li>Postman</li>
   </ul>
   
 <!-- PROJECT FILES DESCRIPTION -->
@@ -59,7 +62,7 @@
 <li>Relevant data captured from the Ticketmaster response includes <i>event name, id, url to purchase tickets, image, date and time, venue name,</i> and <i>geodata</i>.</li></ol><br></ul>
   
 <!-- TICKETMASTER API -->
-<h2 id="tm-api"> Ticketmaster API</h2>
+<h2 id="tm-api"> :open_file_folder: Ticketmaster API</h2>
 <ul>
 <li>Ticketmaster's public API is called and the response is transformed into a RESTful endpoint consumed by our frontend.</li>
 <li>To learn more about the Ticketmaster API and signup for an access key, visit <a href='https://developer.ticketmaster.com/products-and-docs/apis/getting-started/'> Ticketmaster's Developer Portal</a> .</li>
@@ -73,3 +76,40 @@
 
 
 <img width="1272" alt="Screen Shot 2022-10-24 at 7 32 24 PM" src="https://user-images.githubusercontent.com/95776577/197650396-f14452c8-ff99-4e23-983f-abac65410fd6.png">
+
+<!-- SERVER API ENDPOINT -->
+<h2 id="endpoint"> :book: Server API Endpoint</h2>
+<ul>
+<li>Once the repo has been forked and cloned, use Postman to hit the Concert Crew's API endpoint.  Follow steps below to get started.</li>
+ <ol><li><pre><code>$ bundle install</code></pre></li>
+  <li><pre><code>$ rails db:{create,migrate,seed}</code></pre></li>
+  <li><pre><code>$ rails s</code></pre></li></ol>
+  <li> Now, launch Postman and make a query(note-<i>Ticketmaster API Key must be included in project file and Postman</i>).</li></ul>
+  
+  
+  <img width="1368" alt="Screen Shot 2022-10-25 at 2 53 14 PM" src="https://user-images.githubusercontent.com/95776577/197858168-eb9edb1d-19b2-4a3b-a15d-342e2b90be15.png">
+
+ </ol></ul>
+ 
+ <!-- CREDITS -->
+<h2 id="credits"> :scroll: Credits</h2>
+<h3>Shirley DeCesari</h3>
+
+[![GitHub Badge](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/sdecesari)
+[![LinkedIn Badge](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/shirley-decesari-760950157/)
+
+<h3>John Santosuosso</h3>
+
+[![GitHub Badge](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/johnsantosuosso)
+[![LinkedIn Badge](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/john-santosuosso)
+
+<h3>Mayu Takeda</h3>
+
+[![GitHub Badge](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/okayama-mayu)
+[![LinkedIn Badge](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](www.linkedin.com/in/mayu-takeda)
+
+<h3>Rue Zheng</h3>
+
+[![GitHub Badge](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/ruezheng)
+[![LinkedIn Badge](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/ruezheng/)
+
