@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+require 'pry'
 
 module Types
   class EventType < Types::BaseObject
@@ -18,7 +19,6 @@ module Types
     field :attendees, [Types::UserType]
     field :created_at, GraphQL::Types::ISO8601DateTime
     field :updated_at, GraphQL::Types::ISO8601DateTime
-    field :user_id, Integer
 
     def attendees 
       object.users
