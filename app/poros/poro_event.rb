@@ -1,5 +1,6 @@
 class PoroEvent
   attr_reader :name, :id, :buyTicketsUrl, :image, :date, :time, :venueName, :city, :state, :address, :longitude, :latitude
+  
   def initialize(event_data)
     @name = name_check(event_data)
     @id = id_check(event_data)
