@@ -20,6 +20,7 @@
     <li><a href="#tm-api"> ➤ Ticketmaster API</a></li>
     <li><a href="#db-schema"> ➤ Database Schema</a></li>
     <li><a href="#endpoint"> ➤ Server API Endpoint</a></li>
+    <li><a href="#graphql-endpoint"> ➤ GraphQL Endpoint</a></li>
     <li><a href="#credits"> ➤ Credits</a></li>
   </ol>
 </details>
@@ -90,8 +91,26 @@
   <img width="1368" alt="Screen Shot 2022-10-25 at 2 53 14 PM" src="https://user-images.githubusercontent.com/95776577/197858168-eb9edb1d-19b2-4a3b-a15d-342e2b90be15.png">
 
  </ol></ul>
- 
- <!-- CREDITS -->
+
+<!-- GraphQL Endpoint -->
+<h2 id="graphql-endpoint"> 🌐 GraphQL Endpoint</h2>
+
+Implementing GraphQL allows our client-side application to access the user and event data from a single endpoint. Our GraphQL endpoint falls into two categories: queries and mutations. For detailed examples of all the query and mutation types and example responses, see our GraphQL Exnpoint Guide or click the specefic query or mutation below to go to its section.
+
+To make live queries to the GraphQL endpoint and see live schema information, setup the back-end using the local deployment instructions and access GraphiQL at `http://localhost:3000/graphiql`
+
+ - Queries
+   - [user(name: STRING)](https://github.com/concert-crew/server/blob/main/graphql_endpoint_guide.md) _Finds information for a specific user by name in the database, including Events they have added to their profile, and other users they have added as Friends_
+   - [users](https://github.com/concert-crew/server/blob/main/graphql_endpoint_guide.md) _Returns all users in the database_
+   - [event(name: STRING)](https://github.com/concert-crew/server/blob/main/graphql_endpoint_guide.md) _Finds a specific concert event by name_
+   - [events](https://github.com/concert-crew/server/blob/main/graphql_endpoint_guide.md) _Returns all concert events in the database_
+   - [userEvents](https://github.com/concert-crew/server/blob/main/graphql_endpoint_guide.md) _Returns all UserEvent associations for users that have added events to their profile_
+
+ - Mutation
+   - [createEvent](https://github.com/concert-crew/server/blob/main/graphql_endpoint_guide.md) _Creates a new event for a user to add to the event their profile_
+
+<br>
+<!-- CREDITS -->
 <h2 id="credits"> :scroll: Credits</h2>
 <h3>Shirley DeCesari</h3>
 
