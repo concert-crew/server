@@ -150,6 +150,64 @@ Our GraphQL endpoint falls into two categories: queries and mutations.
   - Example Query
   ```
   query {
+    event(name: "Clozee") {
+      id
+      name
+      ticketmasterId    
+      buyTicketsUrl
+      image
+      date    
+      time
+      venueName
+      city
+      state
+      address
+      longitude
+      latitude
+      attendees {
+        id
+      }
+      createdAt
+      updatedAt
+    }
+  }
+  ```
+  
+  - Example Response
+  ```
+    {
+    "data": {
+      "event": {
+        "id": "2",
+        "name": "Clozee",
+        "ticketmasterId": "K8vZ9174Uwf",
+        "buyTicketsUrl": "https://www.ticketmaster.com/clozee-tickets/artist/2236900",
+        "image": "https://s1.ticketm.net/dam/a/a97/da6b1d3a-2403-4244-9d2b-15992fbeea97_1409151_TABLET_LANDSCAPE_LARGE_16_9.jpg",
+        "date": "2023-03-24",
+        "time": "17:30:00",
+        "venueName": "Downtown Miami",
+        "city": "Miami",
+        "state": "Florida",
+        "address": "Streets of Downtown Miami",
+        "longitude": "-80.213359",
+        "latitude": "25.760077",
+        "attendees": [
+          {
+            "id": "3"
+          }
+        ],
+        "createdAt": "2022-10-25T17:48:28Z",
+        "updatedAt": "2022-10-25T17:48:28Z"
+      }
+    }
+  }
+  ```
+  
+4. **[events](https://github.com/concert-crew/server/blob/main/graphql_endpoint_guide.md)** _Returns all concert events in the database_
+
+  - Example Query
+  ```
+  query {
     events {
       id
       name
@@ -169,52 +227,66 @@ Our GraphQL endpoint falls into two categories: queries and mutations.
       }
       createdAt
       updatedAt
-      userId {
-        id
-      }
     }
   }
   ```
   
   - Example Response
   ```
-  
-  ```
-  
-4. **[events](https://github.com/concert-crew/server/blob/main/graphql_endpoint_guide.md)** _Returns all concert events in the database_
 
-  - Example Query
-  ```
-  query {
-    event(name: "Lizzo") {
-      id
-      name
-      ticketmasterId    
-      buyTicketsUrl
-      image
-      date    
-      time
-      venueName
-      city
-      state
-      address
-      longitude
-      latitude
-      attendees {
-        id
-      }
-      createdAt
-      updatedAt
-      userId {
-        id
-      }
+  {
+  "data": {
+    "events": [
+      {
+        "id": "1",
+        "name": "LIZZO",
+        "ticketmasterId": "ZxqgVMyxjZBYPJzwisVEJswJSIcnzynMZAA6",
+        "buyTicketsUrl": "https://www.eticketing.co.uk/asmglobalmanchester",
+        "image": "https://s1.ticketm.net/dam/c/8cf/a6653880-7899-4f67-8067-1f95f4d158cf_124761_TABLET_LANDSCAPE_LARGE_16_9.jpg",
+        "date": "2023-03-11",
+        "time": "19:30:00",
+        "venueName": "AO Arena",
+        "city": "Manchester",
+        "state": "Great Britain",
+        "address": "Victoria Station, Hunts Bank",
+        "longitude": "-2.244066",
+        "latitude": "53.488164",
+        "attendees": [
+          {
+            "id": "1"
+          },
+          {
+            "id": "2"
+          }
+        ],
+        "createdAt": "2022-10-25T17:48:28Z",
+        "updatedAt": "2022-10-25T17:48:28Z"
+      },
+      {
+        "id": "2",
+        "name": "Clozee",
+        "ticketmasterId": "K8vZ9174Uwf",
+        "buyTicketsUrl": "https://www.ticketmaster.com/clozee-tickets/artist/2236900",
+        "image": "https://s1.ticketm.net/dam/a/a97/da6b1d3a-2403-4244-9d2b-15992fbeea97_1409151_TABLET_LANDSCAPE_LARGE_16_9.jpg",
+        "date": "2023-03-24",
+        "time": "17:30:00",
+        "venueName": "Downtown Miami",
+        "city": "Miami",
+        "state": "Florida",
+        "address": "Streets of Downtown Miami",
+        "longitude": "-80.213359",
+        "latitude": "25.760077",
+        "attendees": [
+          {
+            "id": "3"
+          }
+        ],
+        "createdAt": "2022-10-25T17:48:28Z",
+        "updatedAt": "2022-10-25T17:48:28Z"
+        }
+      ]
     }
   }
-  ```
-  
-  - Example Response
-  ```
-  
   ```
   
 5. **[userEvents](https://github.com/concert-crew/server/blob/main/graphql_endpoint_guide.md)** _Returns all UserEvent associations for users that have added events to their profile_
