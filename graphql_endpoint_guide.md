@@ -3,7 +3,7 @@ Our GraphQL endpoint falls into two categories: queries and mutations.
 
 
 ### Queries
-1. **user(name: STRING)** _Finds information for a specific user by name in the database, including **events** they have added to their profile, and other users they have added as **friends**_
+1. **[user(name: STRING)](https://github.com/concert-crew/server/blob/main/graphql_endpoint_guide.md)** _Finds information for a specific user by name in the database, including **events** they have added to their profile, and other users they have added as **friends**_
 
  - Example Query
   ```
@@ -54,7 +54,7 @@ Our GraphQL endpoint falls into two categories: queries and mutations.
   }
   ```
 
-2. **users** _Returns all users in the database_
+2. **[users](https://github.com/concert-crew/server/blob/main/graphql_endpoint_guide.md)** _Returns all users in the database_
 
   - Example Query
   ```
@@ -145,7 +145,7 @@ Our GraphQL endpoint falls into two categories: queries and mutations.
     }
   ```
     
-3. **event(name: STRING)** _Finds a specific concert event by name_
+3. **[event(name: STRING)](https://github.com/concert-crew/server/blob/main/graphql_endpoint_guide.md)** _Finds a specific concert event by name_
 
   - Example Query
   ```
@@ -181,7 +181,7 @@ Our GraphQL endpoint falls into two categories: queries and mutations.
   
   ```
   
-4. **events** _Returns all concert events in the database_
+4. **[events](https://github.com/concert-crew/server/blob/main/graphql_endpoint_guide.md)** _Returns all concert events in the database_
 
   - Example Query
   ```
@@ -217,7 +217,7 @@ Our GraphQL endpoint falls into two categories: queries and mutations.
   
   ```
   
-5. **userEvents** _Returns all UserEvent associations for users that have added events to their profile_
+5. **[userEvents](https://github.com/concert-crew/server/blob/main/graphql_endpoint_guide.md)** _Returns all UserEvent associations for users that have added events to their profile_
 
   - Example Query
   ```
@@ -257,7 +257,7 @@ Our GraphQL endpoint falls into two categories: queries and mutations.
   
 ### Mutations
 
-1. **createEvent** _Creates a new event for a user to add to the event their profile_
+1. **[createEvent](https://github.com/concert-crew/server/blob/main/graphql_endpoint_guide.md)** _Creates a new event for a user to add to the event their profile_
 
   - Example Query
   ```
