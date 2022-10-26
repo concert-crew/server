@@ -25,6 +25,18 @@ module Queries
           expect(result['data']['users'][0]['events'][0]['latitude']).to eq('here')
           expect(result['data']['users'][0]['events'][0]['ticketmasterId']).to eq('abc')
 
+          expect(result['data']['users'][0]['events'][0]).to have_key('name')
+          expect(result['data']['users'][0]['events'][0]).to have_key('date')
+          expect(result['data']['users'][0]['events'][0]).to have_key('image')
+          expect(result['data']['users'][0]['events'][0]).to have_key('buyTicketsUrl')
+          expect(result['data']['users'][0]['events'][0]).to have_key('time')
+          expect(result['data']['users'][0]['events'][0]).to have_key('venueName')
+          expect(result['data']['users'][0]['events'][0]).to have_key('city')
+          expect(result['data']['users'][0]['events'][0]).to have_key('state')
+          expect(result['data']['users'][0]['events'][0]).to have_key('address')
+          expect(result['data']['users'][0]['events'][0]).to have_key('longitude')
+          expect(result['data']['users'][0]['events'][0]).to have_key('latitude')
+          expect(result['data']['users'][0]['events'][0]).to have_key('ticketmasterId')
         end 
 
         def query 
