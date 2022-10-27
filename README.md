@@ -95,7 +95,7 @@
 <!-- GraphQL Endpoint -->
 <h2 id="graphql-endpoint"> 🌐 GraphQL Endpoint</h2>
 
-Implementing GraphQL allows our client-side application to access the user and event data from a single endpoint. Our GraphQL endpoint falls into two categories: queries and mutations. For detailed examples of all the query and mutation types and example responses, see our GraphQL Exnpoint Guide or click the specefic query or mutation below to go to its section.
+Implementing GraphQL allows our client-side application to access the user and event data from a single endpoint. Our GraphQL endpoint falls into two categories: queries and mutations. For detailed examples of all the query and mutation types and example responses, see our [GraphQL Endpoint Guide](https://github.com/concert-crew/server/blob/main/graphql_endpoint_guide.md) or click the specefic query or mutation below to go to its section.
 
 To make live queries to the GraphQL endpoint and see live schema information, setup the back-end using the local deployment instructions and access GraphiQL at `http://localhost:3000/graphiql`
 
