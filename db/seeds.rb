@@ -5,12 +5,12 @@ abby = User.create!(
 
 chantal = User.create!(
   name: 'Chantal',
-  image: 'https://eitrawmaterials.eu/wp-content/uploads/2016/09/person-icon.png'
+  image: 'https://user-images.githubusercontent.com/102189342/197836185-9b2f1f66-98a7-4d77-8b6e-53895b551950.jpg'
 )
 
 mayu = User.create!(
   name: 'Mayu',
-  image: 'https://eitrawmaterials.eu/wp-content/uploads/2016/09/person-icon.png'
+  image: 'https://images.squarespace-cdn.com/content/v1/5b5dfb72697a9837b1f6751b/1534885910963-YMOY6TZ909TRZFKJ2ZDS/Mayu_Takeda.jpg'
 )
 
 shirley = User.create!(
@@ -25,7 +25,7 @@ john = User.create!(
 
 josh = User.create!(
   name: 'Josh',
-  image: 'https://eitrawmaterials.eu/wp-content/uploads/2016/09/person-icon.png'
+  image: 'https://avatars.githubusercontent.com/u/102757890?v=4'
 )
 
 rue = User.create!(

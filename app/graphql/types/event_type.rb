@@ -18,7 +18,7 @@ module Types
     field :attendees, [Types::UserType]
     field :created_at, GraphQL::Types::ISO8601DateTime
     field :updated_at, GraphQL::Types::ISO8601DateTime
-    field :user_id, Integer
+    field :user_id, [Types::UserType]
     
     def attendees 
       object.users
