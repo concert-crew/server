@@ -2,7 +2,7 @@
 
 class EventsService
   class << self
-    def call_for_events(keyword, city)
+    def call_for_events(keyword = nil, city= nil)
       response = conn.get("/discovery/v2/events.json?classificationName=music&countryCode=US&size=10&keyword=#{keyword}&city=#{city}")
       parse_json(response)
     end
