@@ -2,8 +2,8 @@
 
 class EventsService
   class << self
-    def call_for_events(keyword)
-      response = conn.get("/discovery/v2/events.json?classificationName=music&countryCode=US&size=10&keyword=#{keyword}")
+    def call_for_events(keyword, city)
+      response = conn.get("/discovery/v2/events.json?classificationName=music&countryCode=US&size=10&keyword=#{keyword}&city=#{city}")
       parse_json(response)
     end
 
