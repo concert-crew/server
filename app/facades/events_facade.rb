@@ -2,7 +2,7 @@
 
 class EventsFacade
   class << self
-    def get_events(keyword, city)
+    def get_events(keyword = nil, city = nil)
       events = EventsService.call_for_events(keyword, city)
       if events.has_key?(:_embedded)
         all_events = events[:_embedded][:events].map do |event|
