@@ -4,7 +4,7 @@ module Api
   module V1
     class EventsController < ApplicationController
       def show
-        events = EventsFacade.get_events(search_params[:keyword])
+        events = EventsFacade.get_events(search_params[:keyword], search_params[:city])
         if !events.nil?
           render json: EventSerializer.new(events)
         else
@@ -15,7 +15,7 @@ module Api
       private
 
       def search_params
-        params.permit(:keyword)
+        params.permit(:keyword, :city)
       end
     end
   end
