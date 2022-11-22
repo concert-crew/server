@@ -28,15 +28,15 @@ class Mutations::CreateEvent < Mutations::BaseMutation
           errors: []
         }
       else 
-        UserEvent.create(user_id: user_id, event_id: existing_event.id)
+        UserEvent.create!(user_id: user_id, event_id: existing_event.id)
         {
           event: existing_event,
           errors: []
         }
       end 
     elsif existing_event == nil
-      event = Event.create(name: name, date: date, image: image, buy_tickets_url: buy_tickets_url, time: time, venue_name: venue_name, city: city, state: state, address: address, longitude: longitude, latitude: latitude, ticketmaster_id: ticketmaster_id)
-      UserEvent.create(user_id: user_id, event_id: event.id)
+      event = Event.create!(name: name, date: date, image: image, buy_tickets_url: buy_tickets_url, time: time, venue_name: venue_name, city: city, state: state, address: address, longitude: longitude, latitude: latitude, ticketmaster_id: ticketmaster_id)
+      UserEvent.create!(user_id: user_id, event_id: event.id)
       {
         event: event,
         errors: []
