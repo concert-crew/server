@@ -34,9 +34,27 @@ rue = User.create!(
 )
 
 
-Friend.create!(receiver_id: chantal.id, requestor_id: abby.id)
-Friend.create!(receiver_id: mayu.id, requestor_id: abby.id)
-Friend.create!(receiver_id: shirley.id, requestor_id: mayu.id)
+Friend.create!(receiver_id: abby.id, requestor_id: chantal.id)
+Friend.create!(receiver_id: abby.id, requestor_id: mayu.id)
+Friend.create!(receiver_id: abby.id, requestor_id: shirley.id)
+Friend.create!(receiver_id: abby.id, requestor_id: john.id)
+Friend.create!(receiver_id: abby.id, requestor_id: josh.id)
+Friend.create!(receiver_id: abby.id, requestor_id: rue.id)
+Friend.create!(receiver_id: chantal.id, requestor_id: mayu.id)
+Friend.create!(receiver_id: chantal.id, requestor_id: shirley.id)
+Friend.create!(receiver_id: chantal.id, requestor_id: john.id)
+Friend.create!(receiver_id: chantal.id, requestor_id: josh.id)
+Friend.create!(receiver_id: chantal.id, requestor_id: rue.id)
+Friend.create!(receiver_id: mayu.id, requestor_id: shirley.id)
+Friend.create!(receiver_id: mayu.id, requestor_id: john.id)
+Friend.create!(receiver_id: mayu.id, requestor_id: josh.id)
+Friend.create!(receiver_id: mayu.id, requestor_id: rue.id)
+Friend.create!(receiver_id: shirley.id, requestor_id: john.id)
+Friend.create!(receiver_id: shirley.id, requestor_id: josh.id)
+Friend.create!(receiver_id: shirley.id, requestor_id: rue.id)
+Friend.create!(receiver_id: john.id, requestor_id: josh.id)
+Friend.create!(receiver_id: john.id, requestor_id: rue.id)
+Friend.create!(receiver_id: josh.id, requestor_id: rue.id)
 
 
 event1 = Event.create!(
